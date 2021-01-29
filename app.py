@@ -90,7 +90,7 @@ def edit(id):
 
 
 
-@app.route('/<int:id>/delete', methods=('POST',))
+@app.route('/<int:id>/delete', methods=('POST'))
 def delete(id):
     post = get_post(id)
     conn = get_db_connection()

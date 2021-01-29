@@ -104,9 +104,6 @@ def delete(id):
 def aboutus():
     return render_template('about.html')
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
-
 @app.route('/dblinks.html')
 def dblinks():
     return render_template('dblinks.html')
@@ -119,3 +116,5 @@ def monitor():
 def work():
     return render_template('work.html')
 
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')

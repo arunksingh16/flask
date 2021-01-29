@@ -5,10 +5,10 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 import sqlite3
-import logging
+# import logging
 
 # Logging configuration
-logging.basicConfig(filename='demo.log', level=logging.DEBUG)
+# logging.basicConfig(filename='demo.log', level=logging.DEBUG)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
@@ -103,6 +103,9 @@ def delete(id):
 @app.route('/about.html')
 def aboutus():
     return render_template('about.html')
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
 
 @app.route('/dblinks.html')
 def dblinks():

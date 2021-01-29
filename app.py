@@ -7,6 +7,8 @@ from werkzeug.exceptions import abort
 import sqlite3
 import logging
 
+# Logging configuration
+logging.basicConfig(filename='demo.log', level=logging.DEBUG)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'

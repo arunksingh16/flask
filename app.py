@@ -3,8 +3,10 @@
 # flask is aware of static and templates folder
 
 from flask import Flask, render_template, request, url_for, flash, redirect
-import sqlite3
 from werkzeug.exceptions import abort
+import sqlite3
+import logging
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
@@ -111,3 +113,6 @@ def monitor():
 @app.route('/work.html')
 def work():
     return render_template('work.html')
+
+if __name__ == '__app__':
+    app.run(debug=True, host='0.0.0.0')

@@ -1,5 +1,32 @@
 {% extends 'base.html' %}
-{% block title %} About Us {% endblock %}
+{% block title %} Post {% endblock %}
 {% block content %}
-    <h1>Hi This is my About US Page</h1>
+    <div>
+    </div>
+
+    <div class="border border-light p-3 mb-4">
+    <div class="d-flex justify-content-center">
+
+    <div class="d-flex align-items-center justify-content-center" style="height: 350px">
+    <div class="card">
+        <div class="card-header">
+          WEATHER
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h2>Current Weather in <span class="badge badge-primary">{{ city }}</span> is <span class="badge badge-primary">{{ temperature }} °C</span> </h2>
+            <h2>{{ mess }}</h2>
+            <footer class="blockquote-footer">App Testing <cite title="Source Title">By Arun</cite></footer>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+            <a href="{{ url_for('index')}}" class="btn btn-primary">Home</a>
+          </blockquote>
+        </div>
+      </div>
+      </div>
+
+
+    </div>  
+    </div>
+
 {% endblock %}
